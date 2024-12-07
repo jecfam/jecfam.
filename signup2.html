@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="icon" href="jec.ico" type="image/x-icon">
+    <title>LogIn and SignUp Page</title>
+    <div class="progress-container">
+        <div class="progress-bar" id="progressBar"></div>
+    </div>
+     <script>
+        // Simulate loading with a progress bar
+        let progress = 0;
+        const progressBar = document.getElementById('progressBar');
+        const content = document.querySelector('.content');
+
+        const interval = setInterval(() => {
+            if (progress < 100) {
+                progress += 10; // Increment progress
+                progressBar.style.width = progress + '%'; // Update progress bar width
+            } else {
+                clearInterval(interval); // Stop the interval
+                setTimeout(() => {
+                    progressBar.parentElement.style.display = 'none'; // Hide progress bar
+                    content.style.display = 'block'; // Show content
+                    mainContent.style.display = 'block';
+                }, 500); // Short delay before showing content
+            }
+        }, 300); // Adjust loading speed (300ms per increment)
+    </script>
+    
+    <body>
+        <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<div class="topnav" id="myTopnav">
+    <a href="home.html">Home</a>
+    <a href="services.html">Services</a>
+    <a href="products.html">Products</a>
+    <a href="contact.html">Contact</a>
+</div>
+</body>
+</head>
+<style>
+body {
+    margin: 0;
+    padding: 0;
+    background-color: rgb(236, 228, 228);
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family : Verdana,Tahoma, sans-serif;
+    height: 100vh;
+}
+.topnav a:hover {
+    color: #f31212;
+}
+.topnav a {
+    color: #6b6103;
+    padding: 8px;
+    font-family: Courier; 
+    font-weight: 900;
+    font-size: 18px;
+    text-decoration: dotted;
+}
+.topnav {
+padding: 10px;
+position: relative;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+.box {
+    width: 510px;
+    height: 490px;
+    background-color:rgba(120, 101, 206, 0.7);
+    padding: 10px;
+    margin: 8% auto 0;
+    text-align: center;
+    position: relative;
+    box-sizing: border-box;
+    flex-direction: colun;
+    border-radius: 1000px;
+}
+
+.topnav {
+    display: flex;
+    align-items: center;
+    overflow: show;
+    padding: 10px;
+    justify-content: center;
+}
+
+.header {
+	width: 300px;
+    height: 50px;
+	display: inline-flex;
+    padding-top: 20px;
+    padding-bottom: 0;
+	justify-content: space-between;
+}
+
+.header a {
+    font-size: 20px;
+    text-decoration: none;
+    color: #ffffff;
+	display: flex;
+	justify-content: center;
+    cursor:pointer;
+    padding: 20px;
+}
+
+.header .active {
+    color: #eb3ea8;
+	font-weight: bold;
+	position: relative;
+    padding: 20px;
+}
+
+.header .active:after {
+	position: absolute;
+    border: none;
+	content: "";
+}
+
+#errorMsg{
+    color:red;
+    text-align: center;
+    font-size: 12px;
+    padding-bottom: 20px;
+
+}
+
+.content{
+    display: inline-flex;
+    overflow: hidden;
+}
+
+form {
+    position: relative;
+    display: inline-flex;
+    width: 100%;
+    height: 100%;
+	flex-shrink: 0;
+	flex-direction: column;
+	transition: right 0.5s;
+}
+
+.login a{
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 15px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.extend form {
+	right: 100%;
+}
+
+input[type=text], input[type=password], input[type=email]{
+	display:block;
+    position: relative;
+	border: 4px solid #ffffff;
+    border-radius: 50px;
+	padding: 10px;
+    margin-bottom: 15px;
+    width: 100%;
+ 	box-sizing: border-box;
+    font-size: 13px;
+    outline: none;
+}
+
+input[type=text]:hover,  input[type=password]:hover, input[type=email]:hover{
+    border: 4px solid #df80ff;
+
+}
+
+input[type=submit]{
+    display:block;
+    position: relative;
+    border: 3px solid #df80ff;
+    padding: 12px;
+    margin-bottom: 20px;
+    width: 100%;
+    border-radius: 25px;
+    background-color:#FFFFFF ;
+    text-align:center;
+    font-size: 20px;
+    color: #ffffff;
+	cursor:pointer;
+    outline: none;
+}
+	
+input[type=submit]:hover{
+	 background-color:#ffffff;
+     color: #000000;
+     font-weight: bold;
+}
+input[type=checkbox]{
+    background-color:#df80ff;
+}
+#check{
+    margin-top: 10px;
+    text-align: left;
+    color: #ffffff;
+    font-size: 15px;
+}
+.progress-container {
+            width: 100%;
+            height: 7px;
+            background-color: #e0e0e0;
+            border-radius: 45px;
+            overflow: hidden;
+            margin-bottom: 20px;
+            position: relative;
+        }
+
+        .progress-bar {
+            height: 100%;
+            background-color: #3498db; /* Blue */
+            width: 0; /* Initial width */
+            transition: width 0.9s; /* Smooth transition */
+        }
+</style>
+
+<body>
+    <!-- Your product content goes here -->
+    <div class="progress-container">
+        <div class="progress-bar" id="progressBar"></div>
+    </div>
+    <div class="box">
+
+        <div class="page">
+            <div class="header">
+                <a id="login" class="active" href="#login">LOGIN</a>
+                <a id="signup" href="#signup">SIGNUP</a>
+            </div>
+            <div id="errorMsg"></div>
+            <div class="content">
+                <form class="login" name="loginForm" onsubmit="return validateLoginForm()" method="POST">
+                    <input type="text" name="name" id="logName" placeholder="Username">
+                    <input type="password" name="password" id="logPassword" placeholder="Password">
+                    <div id="check">
+                        <input type="checkbox" id="remember">
+                        <label for="remember">Remember me</label>
+                    </div>
+                    <br><br>
+                    <input type="submit" value="Login">
+                    <a href="#">Forgot Password?</a>
+                </form>
+                <form class="signup" name="signupForm" onsubmit="return validateSignupForm()" method="POST">
+                    <input type="email" name="email" id="signEmail" placeholder="Email">
+                    <input type="text" name="name" id="signName" placeholder="Username">
+                    <input type="password" name="password" id="signPassword" placeholder="Password"><br>
+                    <input type="submit" value="SignUp">
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="index.js"></script>
+</body>

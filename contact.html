@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="jec.ico" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>Contact Information</title>
+    <!-- Your product content goes here -->
+    <div class="progress-container">
+        <div class="progress-bar" id="progressBar"></div>
+    </div>
+     <script>
+        // Simulate loading with a progress bar
+        let progress = 0;
+        const progressBar = document.getElementById('progressBar');
+        const content = document.querySelector('.content');
+
+        const interval = setInterval(() => {
+            if (progress < 100) {
+                progress += 10; // Increment progress
+                progressBar.style.width = progress + '%'; // Update progress bar width
+            } else {
+                clearInterval(interval); // Stop the interval
+                setTimeout(() => {
+                    progressBar.parentElement.style.display = 'none'; // Hide progress bar
+                    content.style.display = 'block'; // Show content
+                    mainContent.style.display = 'block';
+                }, 500); // Short delay before showing content
+            }
+        }, 300); // Adjust loading speed (300ms per increment)
+    </script>
+
+    <!-- Internal Styles for Basic Styling -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #dae0e4;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        .topnav a:hover {
+            color: #f39c12;
+        }
+        .topnav a {
+            color: #6b6103;
+            padding: 5px;
+            font-family: Courier; 
+            font-weight: 900;
+        }
+        .topnav {
+            padding: 10px;
+        }
+        section {
+            max-width: 600px;
+            margin: 20px auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        p {
+            margin-bottom: 16px;
+        }
+
+        a {
+            color: #1909f8;
+            text-decoration: none;
+        }
+        .fa {
+  padding: 10px;
+  font-size: 70px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+  border-radius: 100%;
+  color: rgb(228, 67, 67);
+  display: inline-block; /* Allows icons to be inline-block */
+  }
+  /* Center the icons container */
+.container-icons {
+  display: flex;
+  justify-content: center; /* Horizontally center the icons */
+  align-items: center; /* Vertically center the icons */
+  gap: 10px; /* Add spacing between icons */
+  margin-top: 20px;
+}
+
+.fa:hover {
+    opacity: 0.7;
+    color: orange;
+}
+        .progress-container {
+            width: 100%;
+            height: 10px;
+            background-color: #e0e0e0;
+            border-radius: 45px;
+            overflow: hidden;
+            margin-bottom: 20px;
+            position: relative;
+        }
+        P {
+            font-family: moseu;
+        }
+
+        .progress-bar {
+            height: 100%;
+            background-color: #3498db; /* Blue */
+            width: 0; /* Initial width */
+            transition: width 0.9s; /* Smooth transition */
+        }
+
+        .content {
+            display: none; /* Hidden until loaded */
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+     <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<div class="topnav" id="myTopnav">
+    <a href="home.html">Home</a>
+    <a href="services.html">Services</a>
+    <a href="products.html">Products</a>
+    <a href="contact.html">Contact</a>
+    <a href="signup2.html">Sign up</a>
+    
+</div>
+</body>
+<body>
+
+    <h1>Contact Information</h1>
+
+    <!-- Contact Section -->
+    <section>
+        <p>You can contact us through:</p>
+
+        <!-- Email -->
+        <p>Email: <a href="jecfam80@gmail.com">jecfam80@gmail.com</a></p>
+
+        <!-- Phone Number -->
+        <p>Phone: +254743896973 / +254796918764 /+254792223073</p>
+    </section>
+    <div class="container-icons">
+        <a href="https://wa.me/+254743896973" class="fa fa-whatsapp fa-2x"></a>
+        <a href="https://web.facebook.com/profile.php?id=61556703744398" class="fa fa-facebook fa-2x"></a>
+        <a href="https://www.instagram.com/mojeh__254/" class="fa fa-instagram fa-2x"></a>
+        <a href="https://www.youtube.com/channel/UCsfK5pPNfSja2sAMyDVHktw" class="fa fa-youtube fa-2x"></a>
+
+</body>
+
+</html>
